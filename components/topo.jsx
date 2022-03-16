@@ -1,11 +1,13 @@
 import estilos from "../styles/topo.module.css"
 import { Container,Row,Col } from "react-bootstrap"
+import Image from "next/image"
+
 export default function Topo(){
     return(
         <>
           <div className={estilos.background}></div>
 
-          <div className={estilos.texture}></div>
+          <div className={estilos.texture}>
 
           <Container className={estilos.container}>
 
@@ -13,7 +15,7 @@ export default function Topo(){
 
                     <Col xs={12} md={6}>
 
-                        <img src="/assets/mobile.png" alt="" className="img-fluid" />
+                        <Image src="/assets/mobile.png" alt="" className="img-fluid" width={500} height={500} ></Image>
                     </Col>
 
 
@@ -31,6 +33,8 @@ export default function Topo(){
                 </Row>
 
           </Container>
+          
+          </div>
         </>
     )
 }
